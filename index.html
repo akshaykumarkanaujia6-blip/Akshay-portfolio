@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Akshay Kumar Kanaujia | Portfolio</title>
+  <title>Akshay Kumar Kanaujia | Data Analytics & IT Management</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -12,6 +12,8 @@
       --text-muted: #94a3b8;
       --accent: #38bdf8;
       --accent-hover: #0284c7;
+      --excel-green: #10b981;
+      --excel-hover: #059669;
       --border: #334155;
     }
 
@@ -42,7 +44,7 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin-bottom: 8px;
       color: var(--text);
     }
@@ -73,19 +75,36 @@
       color: var(--accent);
     }
 
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .btn {
       display: inline-block;
       background-color: var(--accent);
       color: #0f172a;
-      padding: 10px 20px;
+      padding: 10px 18px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 0.95rem;
       transition: background-color 0.2s;
     }
 
     .btn:hover {
       background-color: var(--accent-hover);
+    }
+
+    .btn-excel {
+      background-color: var(--excel-green);
+      color: #ffffff;
+    }
+
+    .btn-excel:hover {
+      background-color: var(--excel-hover);
     }
 
     /* Sections */
@@ -94,7 +113,7 @@
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-bottom: 20px;
       border-bottom: 2px solid var(--accent);
       display: inline-block;
@@ -119,7 +138,8 @@
     }
 
     .card-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
+      font-weight: 600;
       color: var(--text);
     }
 
@@ -142,7 +162,14 @@
       margin-bottom: 8px;
     }
 
-    /* Badges / Skills */
+    .project-actions {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* Badges */
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
@@ -170,88 +197,102 @@
 
   <div class="container">
     
-    <!-- HEADER SECTION -->
+    <!-- HEADER -->
     <header>
       <h1>Akshay Kumar Kanaujia</h1>
-      <p class="subtitle">MBA | Data Analytics & IT Management</p>
+      <p class="subtitle">MBA | Data Analytics & IT Management Trainee</p>
       
       <div class="contact-links">
-        <a href="mailto:Akshaykumarkanaujia6@gmail.com">📧 Akshaykumarkanaujia6@gmail.com</a>
+        <a href="mailto:Akshaykumarkanaujia@gmail.com">📧 Akshaykumarkanaujia@gmail.com</a>
         <a href="https://linkedin.com/in/akshaykumar73" target="_blank">🔗 linkedin.com/in/akshaykumar73</a>
         <a href="tel:+917355114754">📱 +91 7355 114754</a>
       </div>
 
-      <!-- Replace 'resume.pdf' with the actual path to your PDF file -->
-      <a href="resume.pdf" class="btn" download>Download CV (PDF)</a>
+      <div class="btn-group">
+        <a href="resume.pdf" class="btn" download>📄 Download CV (PDF)</a>
+      </div>
     </header>
 
     <!-- SUMMARY -->
     <section>
-      <h2>About Me</h2>
+      <h2>Professional Summary</h2>
       <p style="color: var(--text-muted);">
-        Ambitious and analytically minded MBA professional with a solid foundation in Computer Applications (BCA). 
-        Combines hands-on experience in IT management, operations, and data administration with a strong technical toolkit 
-        including Excel, SQL, and ERP systems. Proven track record of optimizing workflows, analyzing project costs, and 
-        building dashboards to drive data-backed business insights.
+        Ambitious and analytically minded MBA professional with a solid foundation in Computer Applications (BCA).
+        Combines hands-on experience in IT management, operations, and data administration with a strong technical toolkit
+        including Excel, SQL, Power BI, and ERP systems. Proven track record of optimizing workflows, analyzing project costs,
+        and building dashboards to drive data-backed business insights.
       </p>
     </section>
 
     <!-- PROJECTS SHOWCASE -->
     <section>
-      <h2>Projects & Applications</h2>
+      <h2>Featured Projects & Workbooks</h2>
 
+      <!-- Student Fee & Performance Dashboard -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Student Fee & Performance Analysis Dashboard</span>
+          <span class="card-subtitle">MS Excel & Data Analytics</span>
+        </div>
+        <ul>
+          <li>Developed a comprehensive student data management, attendance, and fee analysis system in MS Excel.</li>
+          <li>Analyzed fee payment trends, attendance metrics, and identified pending dues across multiple batches.</li>
+          <li>Built individual student dashboards and aggregated reporting modules to track operational performance.</li>
+        </ul>
+        <div class="project-actions">
+          <!-- Download uploaded Excel file -->
+          <a href="STUDENT REGISTAR (1) 1 (1).xlsx" class="btn btn-excel" download style="font-size: 0.85rem; padding: 6px 12px;">
+            📊 Download Excel Register (.xlsx)
+          </a>
+          <!-- Replace YOUR_GOOGLE_SHEET_URL_HERE with your Google Sheets link -->
+          <a href="YOUR_GOOGLE_SHEET_URL_HERE" target="_blank" class="btn" style="font-size: 0.85rem; padding: 6px 12px;">
+            🌐 View Interactive Google Sheet
+          </a>
+        </div>
+      </div>
+
+      <!-- Hospital ERP -->
       <div class="card">
         <div class="card-header">
           <span class="card-title">Hospital ERP & EMR Software Implementation</span>
           <span class="card-subtitle">Netram Hospital Information System (HIS)</span>
         </div>
         <ul>
-          <li>Assisted in end-to-end deployment of a specialized Hospital ERP and Electronic Medical Record (EMR) system to digitize clinical operations.</li>
-          <li>Configured patient flow management and automated token queuing modules, reducing OPD waiting times.</li>
-          <li>Managed database transitions for medical histories, shifting toward structured, paperless data tracking.</li>
-          <li>Coordinated rollout of pharmacy inventory, billing, and optical shop modules while leading cross-functional training.</li>
+          <li>Assisted in end-to-end deployment of a specialized Hospital ERP and Electronic Medical Record (EMR) system.</li>
+          <li>Configured patient flow management and automated token queuing modules, reducing patient waiting times.</li>
+          <li>Managed database transitions for electronic medical histories to enable structured, paperless data tracking.</li>
+          <li>Coordinated rollout across pharmacy inventory, billing, and optical shop operations.</li>
         </ul>
       </div>
 
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Student Fee & Performance Analysis Dashboard</span>
-          <span class="card-subtitle">MS Excel</span>
-        </div>
-        <ul>
-          <li>Developed a student data management and fee analysis system using MS Excel.</li>
-          <li>Analyzed fee payment trends, attendance, and performance to track revenue and pending dues.</li>
-          <li>Created interactive dashboards and generated operational insights for administrative decision-making.</li>
-        </ul>
-      </div>
-
+      <!-- Construction Cost Optimization -->
       <div class="card">
         <div class="card-header">
           <span class="card-title">Construction Project Cost & Resource Optimization</span>
           <span class="card-subtitle">MS Excel</span>
         </div>
         <ul>
-          <li>Analyzed project timelines, costs, and resource allocations to identify key cost-saving opportunities.</li>
-          <li>Built dashboards tracking expenses, planned vs. actual performance, and project delays.</li>
+          <li>Analyzed construction project data including costs, timelines, and resource allocation.</li>
+          <li>Identified key cost-saving opportunities and created dashboards to track expenses vs. planned budgets.</li>
         </ul>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- WORK EXPERIENCE -->
     <section>
       <h2>Work Experience</h2>
 
       <div class="card">
         <div class="card-header">
           <div>
-            <span class="card-title">IT Management Trainee (Intern)</span>
-            <div class="card-subtitle">RK Devi Memorial Hospital</div>
+            <span class="card-title">IT Management Trainee (Internship)</span>
+            <div class="card-subtitle">RK DEVI MEMORIAL HOSPITAL</div>
           </div>
           <span class="date">May 2026 – June 2026</span>
         </div>
         <ul>
-          <li>Coordinated IT project workflows and aligned technology solutions with operational strategies.</li>
-          <li>Monitored IT infrastructure performance and maintained documentation for system configurations.</li>
+          <li>Coordinated IT project workflows and assisted in aligning technology solutions with business strategies.</li>
+          <li>Analyzed system requirements, monitored IT infrastructure performance, and maintained system documentation.</li>
         </ul>
       </div>
 
@@ -264,8 +305,8 @@
           <span class="date">2023 – 2025</span>
         </div>
         <ul>
-          <li>Managed operations, project execution, cost optimization, and budget tracking.</li>
-          <li>Prepared operational performance reports to drive efficiency improvements.</li>
+          <li>Assisted in managing operations, project execution, resource allocation, and budget tracking.</li>
+          <li>Prepared operational performance reports and identified cost optimization opportunities.</li>
         </ul>
       </div>
 
@@ -286,16 +327,50 @@
     <!-- SKILLS & CERTIFICATIONS -->
     <section>
       <h2>Skills & Certifications</h2>
-      <div class="skills-grid">
-        <span class="badge">SQL</span>
+      <div class="skills-grid" style="margin-bottom: 20px;">
+        <span class="badge">MS Excel (Advanced)</span>
         <span class="badge">Power BI</span>
-        <span class="badge">MS Excel</span>
+        <span class="badge">SQL</span>
         <span class="badge">Tally</span>
-        <span class="badge">Networking</span>
-        <span class="badge">IT Management</span>
-        <span class="badge">ERP / EMR Systems</span>
-        <span class="badge">Problem Solving</span>
+        <span class="badge">ERP & EMR Systems</span>
+        <span class="badge">Data Management</span>
+        <span class="badge">Process Optimization</span>
         <span class="badge">Leadership</span>
+      </div>
+
+      <div class="card">
+        <div class="card-title" style="margin-bottom: 15px;">Verified Certifications</div>
+        
+        <!-- Certificate Images Gallery Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 15px;">
+          
+          <!-- Excel Certificate -->
+          <div style="background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid var(--border);">
+            <a href="SC-FKA3DV9TWO.jpg" target="_blank">
+              <img src="SC-FKA3DV9TWO.jpg" alt="Microsoft Excel Beginners To Advance Certificate" style="width: 100%; border-radius: 6px; display: block;">
+            </a>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; text-align: center;">
+              <strong>Microsoft Excel Beginners To Advance</strong><br>
+              Skill Course (Aug 2026)
+            </p>
+          </div>
+
+          <!-- Power BI Certificate -->
+          <div style="background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid var(--border);">
+            <a href="SC-LWUAMJVFAQ.jpg" target="_blank">
+              <img src="SC-LWUAMJVFAQ.jpg" alt="30 Days Power BI Micro Course Certificate" style="width: 100%; border-radius: 6px; display: block;">
+            </a>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; text-align: center;">
+              <strong>30 Days Power BI Micro Course</strong><br>
+              Skill Course (July 2026)
+            </p>
+          </div>
+
+        </div>
+
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+          • <strong>Master Diploma in Computer Information:</strong> 2018 – 2020
+        </p>
       </div>
     </section>
 
@@ -323,7 +398,7 @@
     </section>
 
     <footer>
-      <p>© 2026 Akshay Kumar Kanaujia. Built with HTML & CSS.</p>
+      <p>© 2026 Akshay Kumar Kanaujia | Hosted on GitHub Pages</p>
     </footer>
 
   </div>
